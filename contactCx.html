@@ -11,8 +11,8 @@
     <meta name="description"
         content="Accept payments, with our fully integrated platform that can support online and in-person payments. Grow your business,
     go global by giving your customers their choice of payment option. All data and trsancations are secured end to end.">
-    <link rel="shortcut icon" href="assets/icons/logo-icon.png" type="image/x-icon">
-    <title>Demo checkout</title>
+    <link rel="shortcut icon" href="img/logo-icon.png" type="image/x-icon">
+    <title>Support- Payments platform engineered for your business growth</title>
 
     <link rel="stylesheet" href="css/main.css">
 
@@ -28,56 +28,8 @@
 
 </head>
 
-<script>
-
-    function runScript(e, email) {
-        //See notes about 'which' and 'key'
-        if (e.keyCode == 13) {
-            postCheckout(email)
-        }
-    }
-    function postCheckout(email) {
-        const paymentValues = {
-            amount: 2,
-            channel: 'WEB',
-            currencyCode: 'KES',
-            customerInfor: `${email}|'John Doe'|| ${email} ||||||`,
-            dateOfPayment: new Date(),
-            domain: 'ISWKE',
-            fee: '0',
-            iconUrl: '',
-            merchantCode: 'ISWKEN0001',
-            narration: 'invoice.reason',
-            orderId: 'invoice.reference',
-            preauth: '0',
-            redirectUrl: window.location.href,
-            terminalId: '3TLP0001',
-            transactionReference: Math.floor(Math.random() * 1000000000),
-            cardTokensJson:
-                '[{"panLast4Digits":"1895","panFirst6Digits":"506183","token":"C48FA7D7F466914A3E4440DE458AABC1914B9500CC7780BEB4","expiry":"05/20"},{"panLast4Digits":"1111","panFirst6Digits":"411111","token":"DBA747BC30109711E8A1A2FDAFCD27A851B37DDA24F8BE2724","expiry":"04/20"}]'
-        };
-        console.log(paymentValues)
-        const url = "https://testmerchant.interswitch-ke.com/webpay/checkout";
-        form = document.createElement('form');
-        document.body.appendChild(form)
-        form.method = 'post'
-        form.action = url;
-        for (var paymentValue in paymentValues) {
-            var input = document.createElement('input');
-            input.type = 'hidden';
-            input.name = paymentValue;
-            input.value = paymentValues[paymentValue];
-            form.appendChild(input);
-        }
-
-        form.submit();
-        console.log(form)
-    }
-
-</script>
-
 <body>
-    <header class="">
+    <header class="bg">
         <nav class="navbar navbar-expand-lg static-top" id="navi">
             <div class="container nav-content">
                 <a class="navbar-brand" href="index.html">
@@ -109,12 +61,69 @@
             </div>
         </nav>
 
-        
 
 
-    
+        <div class="hero-2">
+            <div class="container">
+                <div class="row align-self-center">
+                    <div class="col-lg-12 text-center">
+                        <h1 class="heading">Contact customer experience</h1>
+                        <p class="description">We look forward to helping yo grow. Leave you message below, our
+                            cusotmer experience team will be in touch with you in a few minutes</p>
+                    </div>
+                </div>
+                <div class="row contact-sec">
+                    <div class="col-md-12 col-lg-12 col-sm-12">
+                            <div class="row">
+                                    <div class="contact-form">
+                                        <form action="#">
+                                            <div class="form">
+                                                <label for="Name" class="p-heading">Name</label>
+                                                <input type="text" class="form-input" id="customerName" aria-describedby=""
+                                                    placeholder="E.g John Smith">
+                                            </div>
+                                            <div class="form">
+                                                <label for="company-name" class="p-heading">Company name</label>
+                                                <input type="text" class="form-input" id="companyName"
+                                                    placeholder="E.g Interswitch group">
+                                            </div>
+                                            <div class="form">
+                                                <label for="Phone-number" class="p-heading">Phone number</label>
+                                                <input type="tel" class="form-input" pattern=".." id="CustomerPhone"
+                                                    placeholder="+254 01 - - -  - - -" size="15" minlength="9" maxlength="15">
+                                            </div>
+                                            <div class="form">
+                                                <label for="email" class="p-heading">Email address</label>
+                                                <input type="email" class="form-input" id="customerEmail"
+                                                    placeholder="workemail@email.com" size="40">
+                                            </div>
+                                            <div class="form">
+                                                <label for="email" class="p-heading">Message</label>
+                                                <textarea name="message" id="moreinfo" class="form-message"
+                                                    placeholder="Let us know about your project (needs, timelines e.t.c )" cols="30"
+                                                    rows="4" spellcheck="false"></textarea>
+                                            </div>
+                                            <button type="submit" class="cta-btn ">Send message</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+    </header>
 
 
+
+
+    <!-- footer-section -->
+    <script>
+        fetch('./components/footer.html')
+            .then(data => data.text())
+            .then(html => document.getElementById('footer').innerHTML = html)
+    </script>
+
+    <div id='footer'></div>
 
     <!--Bootstrap scripts-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
