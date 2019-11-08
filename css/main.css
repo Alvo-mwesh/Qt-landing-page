@@ -778,10 +778,9 @@ input::placeholder{
 }
 
 label{
-    color: var(--sub-heading-color);
     font-size: var(--p-font-size);
+    color: var(--main-text-color);
     font-weight: 500;
-    margin-top: 0
 }
 
 
