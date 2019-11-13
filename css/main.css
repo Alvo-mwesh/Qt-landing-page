@@ -593,14 +593,13 @@ h1,h2, h3, h4, p, a{
 /*=== Support page === */
 
 .contact-sec{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .contact-box{
     align-items: center;
     justify-content: center;
-    margin: 30px 30px;
-    padding: 30px;
+    padding: 50px 0;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     box-shadow: 0px 8px 20px rgba(199, 206, 217, 0.14);
     border-radius: 5px;
@@ -645,13 +644,18 @@ h1,h2, h3, h4, p, a{
 
 /*=== Demo checkout ===*/
 
-.disclaim {
-    font-style: italic;
-    padding-bottom: 40px;
+.padded {
+    padding: 0px 260px;
 }
 
 .checkout-form{
-    margin-top: 40px;
+    margin-top: 5px;
+}
+
+.checkout-form label{
+    font-size: var(--p-font-size);
+    color: var(--main-text-color);
+    font-weight: 500;
 }
 
 form {
@@ -665,7 +669,7 @@ form {
 }
 
 
-input{
+.checkout-form input{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     display: block;
     margin: 10px 0 10px 0;
@@ -685,6 +689,7 @@ input:focus{
 input::placeholder{
     color: #AFAFAF;
     font-size: var(--p-font-size);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 #pay-now-btn{
@@ -701,7 +706,15 @@ input::placeholder{
 }
 
 .doc-link{
-    padding-top: 120px;
+    padding-top: 140px;
+}
+
+.doc-link a{
+    color: var(--link-color);
+}
+
+.doc-link a:hover{
+    color: var(--link-color);
 }
 
 
@@ -777,11 +790,13 @@ input::placeholder{
     box-shadow: 0 0 0 0.01rem var(--link-color);
 }
 
-label{
+.contact-form label{
     font-size: var(--p-font-size);
-    color: var(--main-text-color);
+    color: var(--sub-heading-color);
     font-weight: 500;
 }
+
+
 
 
 
@@ -792,6 +807,10 @@ label{
 @media screen and (max-width: 567px){
 
     /*global*/
+
+    .hero-2{
+        padding: 40px 0px;
+    }
 
     .navbar-nav {
         margin: 20px 0px 0px 0px;
@@ -902,6 +921,21 @@ label{
     flex-grow: 1;
     flex-basis: 100%;
     
+    }
+
+    /* Repsonsive contact */
+
+    .padded{
+        padding: 0 15px;
+    }
+
+    .contact-form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .contact-box{
+        margin-bottom: 25px;
     }
 
 
