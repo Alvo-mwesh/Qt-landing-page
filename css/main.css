@@ -255,9 +255,15 @@ h1,h2, h3, h4, p, a{
     padding-top: 40px;
 }
 
+.box-text{
+    text-align: center;
+    font-size: 13px;
+}
+
 .box-red{
     width: 100%;
-    height: 240px;
+    /* height: 240px; */
+    padding: 20px;
     background-color: #FFE8E8;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -265,7 +271,8 @@ h1,h2, h3, h4, p, a{
 
 .box-green{
     width: 100%;
-    height: 240px;
+    /* height: 240px; */
+    padding: 20px ;
     background-color: #CEFFDC;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -506,9 +513,11 @@ h1,h2, h3, h4, p, a{
     font-size: 	var(--p-font-size);
     font-weight: normal;
     color: var(--white);
+    overflow: hidden;
 }
 
 .ftr:before{
+    float: left;
     content: url(../assets/icons/accept.svg);
     vertical-align: middle;
     margin-right: 8px;
@@ -740,12 +749,17 @@ input::placeholder{
     transition: 0.2s ease-in-out;
 }
 
+.right:nth-child(2){
+    color: red;
+}
+
+
 .left{
     border: 0.8px solid var(--link-color);
 }
 
 .right{
-    padding: 20px 50px;
+    padding: 20px;
     background-color: #F1FDFF;
 }
 
@@ -1073,7 +1087,7 @@ input::placeholder{
     }
 
     .p-text{
-        width: 80%;
+        width: 85%;
     }
 
     .code-showcase{
