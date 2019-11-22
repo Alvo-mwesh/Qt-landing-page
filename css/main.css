@@ -160,6 +160,7 @@ h1,h2, h3, h4, p, a{
 
 
 .heading{
+    text-align: center;
     font-weight: 900;
     font-size: var(--heading-text-size);
     line-height: 1.2;
@@ -216,6 +217,7 @@ h1,h2, h3, h4, p, a{
 
 
 .sub-heading{
+    text-align: center;
     font-size: var(--sub-heading-text-size);
     color: var(--sub-heading-color);
     font-weight: 700;
@@ -264,7 +266,7 @@ h1,h2, h3, h4, p, a{
     width: 100%;
     /* height: 240px; */
     padding: 20px;
-    background-color: #FFE8E8;
+    background-color: #eef2f7;
     margin-bottom: 20px;
     border-radius: 5px;
 }
@@ -285,7 +287,7 @@ h1,h2, h3, h4, p, a{
 
 .p-heading{
     color: var(--sub-heading-color);
-    font-size: var(--p-font-size);
+    font-size: 16px;
     font-weight: 700;
     margin-top: 25px;
 }
@@ -344,6 +346,7 @@ h1,h2, h3, h4, p, a{
 }
 
 .feature ul li{
+    overflow: hidden;
     padding-bottom: 20px;
     color: var(--main-text-color);
     font-size: var(--p-font-size);
@@ -351,6 +354,7 @@ h1,h2, h3, h4, p, a{
 
 .feature ul li::before{
     content: url(../assets/icons/accept.svg);
+    float: left;
     margin-right: 15px;
     vertical-align: middle;
     
@@ -443,7 +447,7 @@ h1,h2, h3, h4, p, a{
     margin: 15px 0;
     padding: 20px 0;
     background: #FFFFFF 0% 0% no-repeat padding-box;
-    box-shadow: 0px 8px 20px rgba(199, 206, 217, 0.14);
+    box-shadow: -3px 7px 30px -6px rgba(210, 210, 210,0.4);
     border-radius: 5px;
     transition: 0.2s ease-in-out;
   
@@ -451,7 +455,6 @@ h1,h2, h3, h4, p, a{
 }
 
 .use-case:hover{
-    box-shadow: 0px 8px 20px rgba(199, 206, 217, 0.14);
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
 }
@@ -489,6 +492,7 @@ h1,h2, h3, h4, p, a{
     background: linear-gradient(90deg, rgba(0,64,96,1) 0%, rgba(0,66,95,1) 0%, rgba(8,90,128,1) 100%);
     border: none;
     border-radius: 4px;
+    padding: 24px;
 }
 
 .cta-heading{
@@ -663,6 +667,7 @@ h1,h2, h3, h4, p, a{
 /*=== Demo checkout ===*/
 
 .padded {
+    text-align: center;
     padding: 0px 260px;
 }
 
@@ -674,6 +679,12 @@ h1,h2, h3, h4, p, a{
     font-size: var(--p-font-size);
     color: var(--main-text-color);
     font-weight: 500;
+}
+
+.price{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--heading-color);
 }
 
 form {
@@ -755,12 +766,18 @@ input::placeholder{
 
 
 .left{
-    border: 0.8px solid var(--link-color);
+    border: 0.8px solid #00b8de38;
+    text-align: left;
+}
+
+.left .p-heading{
+    margin-left: 40px;
 }
 
 .right{
     padding: 20px;
     background-color: #F1FDFF;
+    text-align: center;
 }
 
 .p-content{
@@ -771,13 +788,35 @@ input::placeholder{
 .p-header{
     color: #0b0b0b;
     margin-bottom: 0;
-    font-size: var(--p-font-size);
+    font-size: 16px;
     font-weight: 700;
+}
+
+.txt-right{
+    text-align: center;
 }
 
 .mat-4{
     margin-top: 24px;
 }
+
+.f-row{
+    padding-left: 50px;
+    margin-top: 30px;
+}
+
+.feature-col{
+    background: rgba(238, 242, 247, 0.4) 0% 0% no-repeat padding-box;
+    padding: 5px 25px;
+    height: 100%;
+    border: none;
+    border-radius: 4px;
+}
+
+.mab-4{
+    margin-bottom: 30px;
+}
+
 
 .feature-col ul{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -785,11 +824,6 @@ input::placeholder{
     font-size: var(--p-font-size);
     padding-left: 0;
     list-style: none;
-}
-
-.feature-col{
-    width: 85%;
-    margin: 0 auto;
 }
 
 .feature-col ul li{
@@ -895,6 +929,16 @@ input::placeholder{
 
 @media screen and (max-width: 567px){
 
+    /*Responsive nav*/
+    #navi{
+        padding: 0.7rem 1.6rem;
+    }
+    
+
+    .navbar-toggler{
+        outline: none;
+    }
+
     .hero-2{
         padding: 1200px 0px 0px 0px;
     }
@@ -913,6 +957,7 @@ input::placeholder{
     }
 
     .sub-heading{
+        text-align: center;
         font-size: 20px;
         margin-top: 0px;
     }
@@ -941,6 +986,16 @@ input::placeholder{
 
     .cta-btn{
         display: block;
+        width: 100%;
+    }
+
+    #cta-section{
+        margin: 0px;
+    }
+
+    #cta-section .cta-right-actions{
+        display: contents;
+        text-align: center;
     }
 
     .w-btn{
@@ -964,7 +1019,7 @@ input::placeholder{
     } 
 
     .col-text{
-        text-align: center;
+        text-align: left;
         width: 100%;
 
     }
@@ -984,7 +1039,7 @@ input::placeholder{
 
     /* developers */
     .code-showcase{
-        margin: 10px;
+        margin: 20px;
         width: auto;
     }
 
@@ -997,6 +1052,7 @@ input::placeholder{
 
   
     .cta-bg{
+        padding: 20px;
         margin: 0 10px;
     }
 
@@ -1032,6 +1088,31 @@ input::placeholder{
 
     /*Pricing*/
 
+    .txt-right{
+        text-align: right;
+    }
+
+    .f-row{
+        padding:0px 15px;
+        margin-bottom: 30px;
+    }
+
+    .feature-col{
+        margin-top: 30px;
+    }
+
+    /*FAQ*/
+
+    .quest{
+        margin-top: 20px;
+    }
+    .quest-area{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 0px;
+    }
+
+
 
 }
 
@@ -1050,7 +1131,12 @@ input::placeholder{
     }
 
     .cta-right-actions{
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .cta-right-actions .w-btn{
+        margin-top: 15px;
     }
 
     .cta-ftr{
@@ -1058,12 +1144,16 @@ input::placeholder{
         
     }
 
+    .cta-heading{
+        font-size: 24px;
+    }
+
     #dropdown-only{
         display: block;
     }
 
     .hero-2{
-        padding: 90px 0px;
+        padding: 30px 0px;
     }
 
     .mat-5{
@@ -1071,11 +1161,12 @@ input::placeholder{
     }
 
     .section-wrapper-cta{
-        padding: 60px 0px;
+        padding: 20px 0px;
     }
 
     #cta-section{
         padding: 60px 14px;
+        margin: 0px;
     }
 
     .padded{
@@ -1091,8 +1182,34 @@ input::placeholder{
     }
 
     .code-showcase{
-       width: 90%;
+       width: auto;
+       margin-top: 20px;
     }
+
+    .mab-4{
+        margin-bottom: 25px;
+    }
+
+    .txt-right{
+        text-align: right;
+    }
+
+    .feature p{
+        width: auto;
+    }
+
+    .feature ul li{
+        padding-bottom: 10px;
+    }
+
+    .col-text ul li{
+        padding-bottom: 15px;
+    }
+
+    .doc-link{
+        padding-top: 60px;
+    }
+
 
     /*====== View demo =======*/
 
@@ -1104,6 +1221,15 @@ input::placeholder{
          width: 240px;
      }
 
+     .right-section{
+         margin: 40px 15px 0px;
+     }
+
+     .right-section button{
+         margin-top: 5px;
+         width: 100%;
+     }
+
      .right-section input{
          width: 100%;
      }
@@ -1113,6 +1239,10 @@ input::placeholder{
      .footer-nav{
          margin-bottom: 20px;
      }
+
+     
+
+
 
     
 }
